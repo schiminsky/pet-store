@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyles from "./GlobalStyles";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Hero from "./components/BannerHero";
+import { CategoryList } from "./components/CategoryList";
+import Container from "./components/container/Container";
+import Heading from "./components/container/Heading";
+import { ListaProdutos } from "./components/Product";
+import { ListaBanners } from "./components/Banner";
+import { Newsletter } from "./components/Newsletter";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Header />
+      <Hero />
+      <CategoryList />
+      <Container>
+        <Heading>Novidades</Heading>
+        <ListaProdutos numItens="4" />
+      </Container>
+      <Container>
+        <ListaBanners />
+      </Container>
+      <Container>
+        <Heading>Destaques</Heading>
+        <ListaProdutos numItens="8" />
+      </Container>
+
+      <Newsletter />
+      <Footer />
+    </>
   );
 }
 
