@@ -1,57 +1,22 @@
 import styled from "styled-components";
-import { GoSearch } from "react-icons/go";
+import { FaUser, FaShoppingCart } from "react-icons/fa";
 
-const StyledForm = styled.form`
-  & label {
-    position: absolute;
-    top: -100px;
-    left: -100px;
-  }
-
-  & .pesquisa {
+const IconsWrapper = styled.div`
+  & {
     display: flex;
-    align-items: center;
   }
 
-  & .pesquisa input {
-    display: none;
-    border: unset;
-  }
-
-  @media (min-width: 768px) {
-    & .pesquisa input {
-      display: unset;
-      max-width: 170px;
-    }
-
-    & .pesquisa {
-      border: 1px solid var(--cinza);
-      padding: 5px;
-    }
-  }
-
-  & .pesquisa svg {
+  & svg {
     font-size: 28px;
+    margin: 0 3px;
   }
 `;
 
-const Pesquisa = () => (
-  <>
-    <StyledForm action="">
-      <label htmlFor="#pesquisa">Pesquisa</label>
-
-      <div className="pesquisa">
-        <input
-          type="text"
-          value=""
-          placeholder="Pesquisar..."
-          id="pesquisa"
-          name="pesquisar"
-        />
-        <GoSearch />
-      </div>
-    </StyledForm>
-  </>
+const UserInfo = () => (
+  <IconsWrapper>
+    <FaUser />
+    <FaShoppingCart />
+  </IconsWrapper>
 );
 
-export default Pesquisa;
+export default UserInfo;

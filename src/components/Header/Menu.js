@@ -19,6 +19,7 @@ const MenuWrapper = styled.nav`
     overflow: hidden;
     white-space: nowrap;
     word-wrap: break-word;
+    justify-content: center;
   }
 
   & .menu__itens li {
